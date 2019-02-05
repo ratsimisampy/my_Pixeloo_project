@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
     create_table :items do |t|
       t.string :name, uniqness: true
       t.text :description
-      t.decimal :price, default: 0,0
+      t.decimal :price
 
       t.timestamps
     end
