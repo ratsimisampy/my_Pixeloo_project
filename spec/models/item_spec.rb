@@ -1,5 +1,17 @@
 # frozen_string_literal: true
 
+# == Schema Information
+#
+# Table name: items
+#
+#  id          :bigint(8)        not null, primary key
+#  title       :string
+#  description :text
+#  price       :float            not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
@@ -29,7 +41,7 @@ RSpec.describe Item, type: :model do
 
       it { expect(item).to validate_presence_of(:title) }
       it { expect(item).to validate_presence_of(:price) }
-      it { expect(item).to validate_presence_of(:description) }  
+      it { expect(item).to validate_presence_of(:description) }
       it { expect(item).to validate_uniqueness_of(:title) }
       it { expect(item).to validate_numericality_of(:price) }
       it {
