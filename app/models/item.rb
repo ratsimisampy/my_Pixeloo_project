@@ -12,8 +12,6 @@
 #  updated_at  :datetime         not null
 #
 
-require 'pry'
-
 class Item < ApplicationRecord
   validates :description, presence: true, length: { maximum: 100 }
   validates :title, presence: true, uniqueness: true
