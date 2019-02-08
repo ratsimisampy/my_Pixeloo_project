@@ -10,7 +10,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=app
     ports:
-      - 127.0.0.1:5434:5434
+      - 127.0.0.1:5434:5432
   maildev:
     image: 'djfarrelly/maildev'
     ports:
