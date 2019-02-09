@@ -12,5 +12,5 @@ require "faker"
 
 Item.destroy_all
 20.times do
-  Item.create([{ name: Faker::Name.first_name }, { price: Faker::Number.decimal(2) }, { description: Faker::Lorem.sentence }])
+  Item.create([{ title: Faker::Name.first_name }, { price: Faker::Number.decimal(2) }, { description: Faker::Lorem.paragraph }])
 end
