@@ -1,0 +1,13 @@
+<h1>Bienvenu sur Pixeloo</h1>
+
+
+<%= debug user_signed_in? %>
+<%= debug current_user %>
+
+<p>
+    <% if user_signed_in? %>
+        <%= link_to 'se deconnecter' , destroy_user_session_path, method: :delete%>
+    <% else %>
+        <%= link_to 'se connecter', new_user_session_path  %>
+    <% end %>
+</p>
