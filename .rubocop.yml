@@ -14,7 +14,9 @@ AllCops:
 
 Rails:
   Enabled: true
-
+  Exclude:
+    - 'app/models/user.rb'
+    
 Rails/Output:
   Enabled: false
 
