@@ -13,13 +13,6 @@ RSpec.describe User, type: :model do
       it { is_expected.to have_db_column(:username).of_type(:string).with_options(unique: true, null: false, default: "" ) }
       it { is_expected.to have_db_column(:created_at).of_type(:datetime).with_options(null: false) }
       it { is_expected.to have_db_column(:updated_at).of_type(:datetime).with_options(null: false) }
-      it { is_expected.to have_db_column(:reset_password_token).of_type(:string) }
-      it { is_expected.to have_db_column(:reset_password_sent_at).of_type(:datetime) }
-      it { is_expected.to have_db_column(:remember_created_at).of_type(:datetime) }
-      it { is_expected.to have_db_column(:confirmation_token).of_type(:string) }
-      it { is_expected.to have_db_column(:confirmed_at).of_type(:datetime) }
-      it { is_expected.to have_db_column(:confirmation_sent_at).of_type(:datetime) }
-    end
   end
 
   describe 'Validations' do
@@ -38,4 +31,4 @@ RSpec.describe User, type: :model do
       it { is_expected.to allow_value(/\A[a-zA-Z0-9 _\.]*\z/).for(:username) }
     end
   end
-end
+end 
