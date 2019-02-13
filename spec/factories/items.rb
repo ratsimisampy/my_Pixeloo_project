@@ -14,7 +14,7 @@
 
 FactoryBot.define do
   factory :item do
-    title       { Faker::String.random }
+    title       { Faker::Name.first_name }
     description { Faker::Lorem.paragraph }
     price       { Faker::Number.decimal(2) }
   end

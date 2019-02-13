@@ -6,8 +6,10 @@ inherit_from:
 AllCops:
   DisplayStyleGuide: true
   DisplayCopNames: true
+  TargetRubyVersion: 2.5.3
   Exclude:
     - 'db/schema.rb'
+    - 'db/migrate/*'
     - 'vendor/**/*'
     - 'config/environments/*.rb'
     - 'bin/*'
@@ -16,7 +18,7 @@ Rails:
   Enabled: true
   Exclude:
     - 'app/models/user.rb'
-    
+
 Rails/Output:
   Enabled: false
 
