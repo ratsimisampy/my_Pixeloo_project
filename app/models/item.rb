@@ -10,6 +10,10 @@
 #  price       :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :bigint(8)
+#  category_id :integer
+#  address     :string
+#  city        :string
 #
 
 class Item < ApplicationRecord

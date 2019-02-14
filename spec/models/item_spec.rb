@@ -10,6 +10,10 @@
 #  price       :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :bigint(8)
+#  category_id :integer
+#  address     :string
+#  city        :string
 #
 
 require 'rails_helper'
@@ -29,7 +33,7 @@ RSpec.describe Item, type: :model do
   end
 
   describe 'Validations' do
-    subject(:item) { create(:item) }
+    subject(:item) { p create(:item) }
 
     context 'when factory is valid' do
       it { expect{ item }.to change(described_class, :count).by(1) }

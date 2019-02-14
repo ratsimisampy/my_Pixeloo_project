@@ -10,11 +10,15 @@
 #  price       :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :bigint(8)
+#  category_id :integer
+#  address     :string
+#  city        :string
 #
 
 FactoryBot.define do
   factory :item do
-    title       { Faker::String.random }
+    title       { Faker::Name.first_name }
     description { Faker::Lorem.paragraph }
     price       { Faker::Number.decimal(2) }
   end
