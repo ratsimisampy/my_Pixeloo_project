@@ -7,6 +7,7 @@ class Users::RegistrationsController
 
   # GET /resource/sign_up
     def new; end
+  end
 end
   #   super
   # end
