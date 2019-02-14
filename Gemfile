@@ -45,5 +45,5 @@ group :test do
   gem 'simplecov', '~> 0.16.1', require: false
 end
 
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
