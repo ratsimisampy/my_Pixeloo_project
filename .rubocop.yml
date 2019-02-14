@@ -33,3 +33,4 @@ Metrics/BlockLength:
     - 'spec/**/*.rb'
     - 'Guardfile'
     - 'vendor/bundle'
+    - 'user.rb'
