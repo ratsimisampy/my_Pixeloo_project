@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-<<<<<<< HEAD
-=======
-
-=======
 # == Schema Information
 #
 # Table name: users
@@ -25,7 +21,6 @@
 #  last_name              :string
 #
 
->>>>>>> e635ad6a9678c62a9eadb8f7ec25b371a84406e3
 require 'rails_helper'
 
 RSpec.describe User, type: :model do

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-
-
 # == Schema Information
 #
 # Table name: users
@@ -22,7 +20,6 @@
 #  first_name             :string
 #  last_name              :string
 #
-
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
