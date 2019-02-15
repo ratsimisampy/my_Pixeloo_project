@@ -1,5 +1,5 @@
 <div class="body-wrap">
-  <section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url('../../assets/images/backgrounds/slider/img-45.jpg'); background-position: bottom center;">
+  <section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(<%= asset_path 'backgrounds/slider/img-45.jpg' %>); background-position: bottom center;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -38,7 +38,7 @@
         <div class="form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <small>(<%= @minimum_password_length %> characters minimum)</small>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", class:"form-control form-control-lg" %>
   </div>
@@ -52,7 +52,7 @@
 </div>
 </div>
 <span class="space-md-md">
-    <%= f.submit "Sign up", class: "btn btn-styled btn-lg btn-block btn-base-1 mt-4" %>
+    <%= f.submit "Sign up", class: "btn btn-styled btn-md btn-block btn-base-1 mt-4" %>
 <% end %>
 </span>
 </form>
