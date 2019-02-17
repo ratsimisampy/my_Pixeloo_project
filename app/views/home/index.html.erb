@@ -1,20 +1,4 @@
-<!--
-<h1>Bienvenu sur Pixeloo</h1>
 
-
-<%= debug user_signed_in? %>
-<%= debug current_user %>
-
-<p>
-    <% if user_signed_in? %>
-        <%= link_to 'Log out' , destroy_user_session_path, method: :delete %>
-    <% else %>
-        <%= link_to 'Sign in', new_user_session_path  %>
-        <%= link_to 'Sign up', new_user_registration_path  %>
-        <%= link_to 'Log in', new_user_session_path  %>
-    <% end %>
-</p>
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -567,9 +551,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-buttons mt-4">
-                                                <a href="#" class="btn  btn-gray-dark btn-circle px-4">
-                                                    Explore
-                                                </a>
+                                                <%= link_to 'Explorer', category_reflex_path, class: "btn  btn-gray-dark btn-circle px-4"  %>
                                             </div>
                                         </div>
                                     </div>
@@ -601,9 +583,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-buttons mt-4">
-                                                <a href="#" class="btn  btn-gray-dark btn-circle px-4">
-                                                    Explore
-                                                </a>
+                                            <%= link_to 'Explorer', category_objectif_path, class: "btn  btn-gray-dark btn-circle px-4"  %>
                                             </div>
                                         </div>
                                     </div>
@@ -635,9 +615,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-buttons mt-4">
-                                                <a href="#" class="btn  btn-gray-dark btn-circle px-4">
-                                                    Explore
-                                                </a>
+                                            <%= link_to 'Explorer', category_eclairage_path, class: "btn  btn-gray-dark btn-circle px-4"  %>
                                             </div>
                                         </div>
                                     </div>
