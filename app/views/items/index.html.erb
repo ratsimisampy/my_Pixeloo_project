@@ -19,9 +19,9 @@
         <td><%= item.title %></td>
         <td><%= item.description %></td>
         <td><%= item.price %></td>
-       
-        <td><%= link_to 'Show', item %></td>
-        
+
+        <td><%= link_to 'Show', category_item_path(id: item.id) %></td>
+
       </tr>
     <% end %>
   </tbody>

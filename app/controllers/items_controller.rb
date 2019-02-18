@@ -3,11 +3,12 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all.order(:id)
+    @categories = Category.all
   end
 
   def show
-    puts "Heyy Item show"
     @item = Item.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def new
@@ -41,4 +42,10 @@ class ItemsController < ApplicationController
   end
 
   def destroy; end
+
+  private
+
+  def item_params
+    params.require(:items).permit(:title, :description, :price, :category_id, :image_url, :user_id)
+  end
 end
