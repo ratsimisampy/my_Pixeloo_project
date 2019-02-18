@@ -14,6 +14,7 @@
 #  category_id :integer
 #  address     :string
 #  city        :string
+#  image_url   :string
 #
 
 class Item < ApplicationRecord

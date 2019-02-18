@@ -14,6 +14,7 @@
 #  category_id :integer
 #  address     :string
 #  city        :string
+#  image_url   :string
 #
 
 FactoryBot.define do

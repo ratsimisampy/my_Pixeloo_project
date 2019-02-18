@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
-
+#require 'rails_helper'
+=begin
 RSpec.describe ItemsController, type: :controller do
   describe "GET #index" do
     it "returns http success" do
@@ -10,3 +10,4 @@ RSpec.describe ItemsController, type: :controller do
     end
   end
 end
+=end
