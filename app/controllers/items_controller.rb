@@ -41,4 +41,23 @@ class ItemsController < ApplicationController
   end
 
   def destroy; end
+
+  def reflex
+    puts "Hey I am in reflex category!!!!!!!!!!!!!!!!!!!"
+    items = Item.all.order(:id)
+    @items = items.all.where(category_id: 1)
+  end
+
+  def eclairage
+    puts "Hey I am in ECLAIRAGE category!!!!!!!!!!!!!!!!!!!"
+    items = Item.all.order(:id)
+    @items = items.all.where(category_id: 2)
+  end
+
+  def objectif
+    puts "Hey I am in OBJECTIF category!!!!!!!!!!!!!!!!!!!"
+    items = Item.all.order(:id)
+    @items = items.all.where(category_id: 3)
+  end
+
 end

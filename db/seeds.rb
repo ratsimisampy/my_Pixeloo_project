@@ -21,11 +21,9 @@ d = "zoom grand angle"
 # g = "flash cobra"
 h = "éclairage continu"
 
-  1.times do |user|
-
- users = User.create!(email: "rado@gmail.com", password: "azerty", password_confirmation: "azerty", first_name: "Rado", last_name: "Pixeloo", username: "rado")
-
- end
+1.times do
+  User.create!(email: "rado@gmail.com", password: "azerty", password_confirmation: "azerty", first_name: "Rado", last_name: "Pixeloo", username: "rado")
+end
 
 # categorie 1
 items = Item.create!(title: "Nikon D700", description: a, price: "10", user_id: "1", category_id: "1", address: '20 rue Saint Roch 75001 PARIS', city: "Paris", image_url: "boitier/nikonD700.jpg")

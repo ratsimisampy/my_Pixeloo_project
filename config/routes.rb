@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
   root 'home#index'
   resources :items
-  get "/categories/reflex", to: "categories#reflex", as: "category/reflex"
-  get "/categories/objectif", to: "categories#objectif", as: "category/objectif"
-  get "/categories/eclairage", to: "categories#eclairage", as: "category/eclairage"
+  get 'reflex_category', to: 'items#reflex'
+  get 'objectif_category', to: 'items#objectif'
+  get 'eclairage_category', to: 'items#eclairage'
 end
