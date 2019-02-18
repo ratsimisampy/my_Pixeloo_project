@@ -13,7 +13,6 @@
 #  user_id     :bigint(8)
 #  address     :string
 #  city        :string
-#  image_url   :string
 #  category_id :integer
 #
 
