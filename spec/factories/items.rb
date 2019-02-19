@@ -13,7 +13,8 @@
 #  user_id     :bigint(8)
 #  address     :string
 #  city        :string
-#  category_id :integer
+#  image_url   :string
+#  category_id :bigint(8)
 #
 
 FactoryBot.define do
