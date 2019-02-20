@@ -3,7 +3,8 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all.order(:id)
-    @categories = Category.all
+    # @categories = Category.all
+    @filteredItems = Item.all.where(category_id: @category[0])
   end
 
   def show
