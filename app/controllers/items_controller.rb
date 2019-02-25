@@ -2,9 +2,10 @@
 
 class ItemsController < ApplicationController
   def index
-    @items = Item.all.order(:id)
+    @items_all = Item.all.order(:id)
     # @categories = Category.all
-    @filteredItems = Item.all.where(category_id: @category[0])
+    @items = Item.where("category_id = ?", params[:category_id])
+    @category = Category.find(params[:category_id])
   end
 
   def show

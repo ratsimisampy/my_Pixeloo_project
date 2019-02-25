@@ -1,13 +1,13 @@
-  <section class="slice sct-color-2">  
+<section class="slice sct-color-2">
     <div class="container">
         <div class="section-title section-title--style-1 text-center">
             <h3 class="section-title-inner heading-3 strong-600 text-capitalize">
-                <span>Catégorie boitiers numériques</span>
+                <span>Catégorie <%= @category.name %></span>
             </h3>
         </div>
 
         <div class="row cols-xs-space cols-sm-space cols-md-space">
-        <% @filteredItems.each do |item| %>
+        <% @items.each do |item| %>
             <div class="col-lg-3">
                 <div class="block product no-border z-depth-2-top z-depth-2--hover">
                     <div class="block-image">
