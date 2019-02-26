@@ -150,7 +150,6 @@ items.item_images.attach(io: File.open('app/assets/images/eclairage/canon-speedl
 # items = Item.create!(title: "canon speedlite-470", description: g, price: "25", user_id: "1", category_id: "2", address: '22 rue Meynadier 75019 PARIS', city: "Paris")
 # items.item_images.attach(io: File.open('app/assets/images/eclairage/canon-speedlite-470.png'), filename: 'canon-speedlite-470.png', content_type: 'image/png')
 #
-# 
 # items = Item.create!(title: "nikon76683351", description: g, price: "15", user_id: "1", category_id: "2", address: '14 RUE BREVIN 75014 PARIS', city: "Paris")
 # items.item_images.attach(io: File.open('app/assets/images/eclairage/nikon76683351.png'), filename: 'nikon76683351.png', content_type: 'image/png')
 #
