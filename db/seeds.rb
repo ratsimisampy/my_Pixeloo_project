@@ -159,8 +159,3 @@ items.item_images.attach(io: File.open('app/assets/images/eclairage/canon-speedl
 # items = Item.create!(title: "nikon-speedlight-sb5000", description: g, price: "25", user_id: "1", category_id: "2", address: ' 5 Boulevard Diderot 75012 PARIS', city: "Paris")
 # items.item_images.attach(io: File.open('app/assets/images/eclairage/nikon-speedlight-sb5000.png'), filename: 'nikon-speedlight-sb5000.png', content_type: 'image/png')
 
-OrderStatus.delete_all
-OrderStatus.create! id: 1, name: "In Progress"
-OrderStatus.create! id: 2, name: "Placed"
-OrderStatus.create! id: 3, name: "Shipped"
-OrderStatus.create! id: 4, name: "Cancelled"
