@@ -22,7 +22,8 @@ class OrderItem < ApplicationRecord
     unit_price * quantity
   end
 
-private
+  private
+
   def item_present
     if item.nil?
       errors.add(:item, "is not valid or is not active.")

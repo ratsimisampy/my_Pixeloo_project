@@ -25,4 +25,7 @@ class Item < ApplicationRecord
   has_many_attached :item_images
   belongs_to :user, optional: true
   belongs_to :category, optional: true
+  has_many :order_items
+
+  default_scope { where(active: true) }
 end
