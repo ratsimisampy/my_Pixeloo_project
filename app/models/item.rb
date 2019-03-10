@@ -18,14 +18,16 @@
 #
 
 class Item < ApplicationRecord
-  validates :description, presence: { message: "La description doit être renseignée." }, length: { maximum: 100 }
-  validates :title, presence: { message: "Le titre doit être renseigné." }
-  validates :price, presence: { message: "Le prix doit être renseigné." }, numericality: { only_float: true }
-
   has_many_attached :item_images
   belongs_to :user, optional: true
   belongs_to :category, optional: true
   has_many :order_items, dependent: :nullify
+  belongs_to :user
+  has_and_belongs_to_many :orders
+  
+  validates :description, presence: { message: "La description doit être renseignée." }, length: { maximum: 100 }
+  validates :title, presence: { message: "Le titre doit être renseigné." }
+  validates :price, presence: { message: "Le prix doit être renseigné." }, numericality: { only_float: true }
 
   default_scope { where(active: true) } # ceci permet que seuls les produits actif seront pris en compte
 end

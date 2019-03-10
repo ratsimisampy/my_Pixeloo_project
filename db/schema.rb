@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_06_215259) do
+ActiveRecord::Schema.define(version: 2019_03_10_130249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 2019_03_06_215259) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -82,9 +87,10 @@ ActiveRecord::Schema.define(version: 2019_03_06_215259) do
     t.decimal "tax", precision: 12, scale: 3
     t.decimal "shipping", precision: 12, scale: 3
     t.decimal "total", precision: 12, scale: 3
-    t.integer "status", default: 0, null: false
+    t.bigint "order_status_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
   end
 
   create_table "users", force: :cascade do |t|
