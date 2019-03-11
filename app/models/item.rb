@@ -23,7 +23,7 @@ class Item < ApplicationRecord
   belongs_to :category, optional: true
   has_many :order_items, dependent: :nullify
   belongs_to :user
-  has_and_belongs_to_many :orders
+  has_many :orders, through: :order_item
 
   validates :description, presence: { message: "La description doit être renseignée." }, length: { maximum: 100 }
   validates :title, presence: { message: "Le titre doit être renseigné." }
