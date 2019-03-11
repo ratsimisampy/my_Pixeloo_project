@@ -6,7 +6,7 @@ class Order < ApplicationRecord
   has_many :order_items
 
   before_save :update_subtotal
-  enum status: [:ordered, :payed, :in_progress, :send]
+  enum status: %i[ordered payed in_progress send]
 
   def subtotal
     order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
