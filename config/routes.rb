@@ -2,7 +2,8 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  # resources :users
+  root 'home#index'
+  
   resources :items
 
   resources :categories do
@@ -13,5 +14,4 @@ Rails.application.routes.draw do
     resources :items, only: [:index]
   end
 
-  root 'home#index'
 end

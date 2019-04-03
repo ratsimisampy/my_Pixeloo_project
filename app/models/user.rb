@@ -44,8 +44,8 @@ class User < ApplicationRecord
       where(conditions.to_hash).first
     end
 
-    # puts "======="
-    # puts warden_conditions.inspect
-    # puts "======="
+     puts "======="
+     puts warden_conditions.inspect
+     puts "======="
   end
 end

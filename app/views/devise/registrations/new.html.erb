@@ -1,5 +1,5 @@
 <div class="body-wrap">
-  <section class="slice-lg has-bg-cover bg-size-cover" style="background-image: url(<%= asset_path 'backgrounds/slider/img-45.jpg' %>); background-position: bottom center;">
+  <section class="slice-lg has-bg-cover bg-size-cover"  background-position: bottom center;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -10,55 +10,55 @@
                       </div>
                   </div>
                   <div class="form-body">
-                      <div class="text-center px-2">
+                    <div class="text-center px-2">
                         <h5 class="heading heading-5 strong-500">
                           Create a new account
-                      </h5>
+                        </h5>
                     </div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-  <div class="card-body">
-      <form class="form-default" data-toggle="validator" role="form">
-          <div class="row">
-              <div class="col-md-6">
-                  <div class="form-group">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, class:"form-control form-control-lg" %>
-  </div>
-</div>
-<div class="col-md-6">
-    <div class="form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, class:"form-control form-control-lg" %>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <div class="form-group">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <small>(<%= @minimum_password_length %> characters minimum)</small>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"form-control form-control-lg" %>
-  </div>
-</div>
+    <%= devise_error_messages! %>
+    <div class="card-body">
+        <form class="form-default" data-toggle="validator" role="form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <%= f.label :username %><br />
+                        <%= f.text_field :username, autofocus: true, class:"form-control form-control-lg" %>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <%= f.label :email %><br />
+                        <%= f.email_field :email, class:"form-control form-control-lg" %>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <%= f.label :password %>
+                        <% if @minimum_password_length %>
+                            <small>(<%= @minimum_password_length %> characters minimum)</small>
+                        <% end %><br />
+                        <%= f.password_field :password, autocomplete: "new-password", class:"form-control form-control-lg" %>
+                    </div>
+                </div>
 
-<div class="col-md-6">
-    <div class="form-group">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control form-control-lg" %>
-  </div>
-</div>
-</div>
-<span class="space-md-md">
-    <%= f.submit "Sign up", class: "btn btn-styled btn-md btn-block btn-base-1 mt-4" %>
-<% end %>
-</span>
-</form>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <%= f.label :password_confirmation %><br />
+                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control form-control-lg" %>
+                    </div>
+                </div>
+            </div>
+            <span class="space-md-md">
+                <%= f.submit "Sign up", class: "btn btn-styled btn-md btn-block btn-base-1 mt-4" %>
+                <% end %>
+            </span>
+        </form>
 
-<%= render "devise/shared/links1" %>
-</div>
+        <%= render "devise/shared/links1" %>
+    </div>
 </div>
 </div>
 </div>
