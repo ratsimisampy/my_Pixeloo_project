@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { confirmations: 'confirmations' }
   resources :users
   resources :items
-
+  
   resources :categories do
     resources :items, only: %i[index show]
   end
