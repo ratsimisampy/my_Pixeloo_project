@@ -15,6 +15,7 @@
 #  city        :string
 #  image_url   :string
 #  category_id :bigint(8)
+#  active      :boolean
 #
 
 FactoryBot.define do

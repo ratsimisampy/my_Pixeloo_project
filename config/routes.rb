@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { confirmations: 'confirmations' }
   resources :users
   resources :items
-  
+
   resources :categories do
     resources :items, only: %i[index show]
   end
